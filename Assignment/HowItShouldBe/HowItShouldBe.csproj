@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{261F52A4-6D0E-4A60-8189-7A99C5C4D210}</ProjectGuid>
+    <ProjectGuid>{66FC62DB-E568-4A06-A971-B6F6186E4676}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Assignment</RootNamespace>
-    <AssemblyName>Assignment</AssemblyName>
+    <RootNamespace>HowItShouldBe</RootNamespace>
+    <AssemblyName>HowItShouldBe</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,17 +22,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,13 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryManager.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\ReceiptDetails.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Items\ElectronicItem.cs" />
+    <Compile Include="Items\FoodItem.cs" />
+    <Compile Include="ReceiptDetails.cs" />
     <Compile Include="SalesTaxCalculator.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\MagazineItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
