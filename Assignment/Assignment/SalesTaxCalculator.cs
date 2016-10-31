@@ -26,18 +26,17 @@ namespace Assignment
 
                     //set item price including taxes
                     item.PriceIncludingSalesTax = item.Price + importTax + salesTax;
+                    item.PriceIncludingSalesTax = Math.Round(item.PriceIncludingSalesTax, 2, MidpointRounding.AwayFromZero);
 
                     //increment total receipt price and sales taxes
                     receipt.SalesTax += salesTax + importTax;
                     receipt.Total += item.Price + importTax + salesTax;
 
-                    //round up the item price to 2 decimals
-                    item.PriceIncludingSalesTax = Math.Round(item.PriceIncludingSalesTax, 2, MidpointRounding.AwayFromZero);
-
                     //add the item to the receipt
                     receipt.ReceiptItems.Add(item);
                 }
             }
+
             //compute total
             receipt.Total = Math.Round(receipt.Total, 2, MidpointRounding.AwayFromZero);
 
